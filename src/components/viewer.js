@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { initAPS } from "./main";
+import { initAPS } from "../services/main";
 
 const Viewer = () => {
   const viewerDiv = useRef(null);

@@ -1,6 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Viewer from "./viewer";
+import Viewer from "./components/viewer";
 
 function App() {
   return (
@@ -13,7 +12,7 @@ function App() {
         </button>
         <input style={{ display: "none" }} type="file" id="input" />
       </div>
-      <Viewer/>
+      <Viewer />
     </div>
   );
 }

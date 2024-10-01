@@ -6,9 +6,12 @@ const Autodesk = window.Autodesk;
 
 async function getAccessToken(callback) {
   try {
-    const resp = await axios.get("http://localhost:8080/api/auth/token");
+    const resp = await fetch("http://localhost:8080/api/auth/token", {headers:{
+      "Access-Control-Allow-Origin": "*"
+    }});
     if (!resp.ok) {
-      throw new Error(await resp.text());
+      console.log('resp', resp)
+      throw new Error(await resp?.text());
     }
     const { access_token, expires_in } = await resp.json();
     callback(access_token, expires_in);
