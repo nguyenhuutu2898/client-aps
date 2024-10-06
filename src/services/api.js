@@ -6,7 +6,7 @@ const Autodesk = window.Autodesk;
 
 async function getAccessToken(callback) {
   try {
-    const resp = await fetch("http://localhost:8080/api/auth/token", {headers:{
+    const resp = await fetch("https://server-aps.onrender.com/api/auth/token", {headers:{
       "Access-Control-Allow-Origin": "*"
     }});
     if (!resp.ok) {
